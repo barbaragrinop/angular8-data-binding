@@ -12,6 +12,9 @@ export class EventBindingComponent implements OnInit {
   valor = 0;
   spinnerMode = "determinate";
   btnEnable = true;
+  selectDisabled = false;
+  selectedOption = 1;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -39,4 +42,15 @@ export class EventBindingComponent implements OnInit {
     }, 3000);
   }
 
+  cbChange(event){
+    console.log(event.checked);
+    this.selectDisabled = event.checked;
+  }
+
+  selectionChange(event){
+    console.log(event);
+    this.selectedOption = event.value;
+  }
 }
+
+
