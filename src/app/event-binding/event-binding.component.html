@@ -15,3 +15,39 @@
         [value]="valor">
     </mat-progress-spinner>
 </section>
+
+<section>
+    <mat-card class="mycard">
+        <mat-card-content>
+            <p><mat-checkbox color="warn" (change) = "cbChange($event)">Disabled / Enabled</mat-checkbox></p>
+            <p>
+                <mat-form-field appearance="fill">
+                    <mat-label>Cars</mat-label>
+                    <mat-select matNativeControl required [disabled] = "selectDisabled" (selectionChange) = "selectionChange($event)">
+                        <mat-option value="1">Volvo</mat-option>
+                        <mat-option value="2">Saab</mat-option>
+                        <mat-option value="3">Mercedes</mat-option>
+                        <mat-option value="4">Audi</mat-option>
+                    </mat-select>
+                </mat-form-field> 
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+           <p>Selected Option {{selectedOption v v}} </p>
+        </mat-card-actions>
+    </mat-card>
+</section>
+
+
+
+<section>
+    <mat-card class="mycard">
+        <mat-card-content>
+            
+                
+        </mat-card-content>
+        <mat-card-actions>
+           
+        </mat-card-actions>
+    </mat-card>
+</section>
