@@ -1,4 +1,5 @@
 <p>event-binding works!</p>
+<mat-divider></mat-divider>
 
 <section>
     <button mat-button color = "primary" (click)="save()" >Save</button>
@@ -15,6 +16,8 @@
         [value]="valor">
     </mat-progress-spinner>
 </section>
+
+<mat-divider></mat-divider>
 
 <section>
     <mat-card class="mycard">
@@ -33,21 +36,26 @@
             </p>
         </mat-card-content>
         <mat-card-actions>
-           <p>Selected Option {{selectedOption v v}} </p>
+           <p>Selected Option {{selectedOption}} </p>
         </mat-card-actions>
     </mat-card>
 </section>
+<mat-divider></mat-divider>
 
 
 
 <section>
     <mat-card class="mycard">
         <mat-card-content>
-            
-                
+            <mat-form-field appearance="fill">
+                <mat-label>Input</mat-label>
+                <input matInput placeholder="Fisrt Name" (input) = "inputName = $event.target.value" [value]="inputName">
+              </mat-form-field> 
         </mat-card-content>
         <mat-card-actions>
-           
+           Name: {{inputName}}
         </mat-card-actions>
     </mat-card>
 </section>
+
+<mat-divider></mat-divider>
